@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultas especialidades</title>
+    <link rel="stylesheet" href="stylesheets/style2.css">
+</head>
+<body>
+    <header>
+        <header>
+            <!-- logo -->
+            <figure class="icono">
+                <img class="icon" src="img/icon.png" alt="icono">
+                <figcaption>CITYMED</figcaption>
+            </figure>
+            <div class="enlace">
+                <a class="enlaces" href="index.html">Volver</a>
+            </div>
+            <!-- encabezado -->
+            <h1>CONSULTA CITA MEDICA</h1>
+            <h3>Completa la siguiente informacion para agendar tu proxima cita medica</h3>
+        </header>
+    </header>
+    <main>
+        <div class="registrar">
+            <div class="select">
+                <form method="post" action="/consulta-cita" class="form">
+                    <label for="especialidad">Especialidad</label>
+                    <select name="especialidad" id="especialidad" class="op" required>
+                        <option value="">----------Seleccione una opcion-----------</option>
+                        <option value="Medicina general">Medicina general</option>
+                        <option value="Cardiología">Cardiología</option>
+                        <option value="Medicina interna">Medicina interna</option>
+                        <option value="Dermatología">Dermatología</option>
+                        <option value="Rehabilitación física">Rehabilitación física</option>
+                        <option value="Psicología">Psicología</option>
+                        <option value="Odontología">Odontología</option>
+                        <option value="Radiología">Radiología</option>
+                        <input type="submit" class="submitBoton" value="Consultar">
+                    </select>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="page-foot">
+            <h5>Colombia</h5>
+            <hr>
+            <div class="foot">
+                <!-- enlaces -->
+                <a class="enlaces" href="https://www.facebook.com/?locale=es_LA">FACEBOOK</a> <b>/</b>
+                <a class="enlaces" href="https://www.instagram.com/">INSTAGRAM</a> <b>/</b>
+                <a class="enlaces" href="https://twitter.com/?lang=es">TWITTER</a> <b>/</b>
+                <a class="enlaces" href="https://co.linkedin.com/">LINKEDIN</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

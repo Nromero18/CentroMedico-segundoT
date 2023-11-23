@@ -1,0 +1,53 @@
+<body>
+    <header>
+        <!-- logo -->
+        <figure class="icono">
+            <img class="icon" src="img/icon.png" alt="icono">
+            <figcaption>CITYMED</figcaption>
+        </figure>
+        <div class="enlace">
+            <a class="enlaces" href="index.html">Volver</a>
+        </div>
+        <!-- encabezado -->
+        <h1>LISTADO DE PACIENTES</h1>
+        <h3>A continuacion encontraras una tabla con el listado de todos los pacientes registrados en nuestra plataforma
+        </h3>
+    </header>
+    <!-- tabla -->
+    <nav>
+        <section>
+            <table class="table" border="solid">
+                <thead>
+                    <tr>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>
+                        <th>Cedula</th>
+                        <th>Telefono</th>
+                        <th>fecha nacimiento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Se agrega el contenido dinamicamente por medio de Handlebars -->
+                    {{#each resultado}}
+                    <tr>
+                        <td>{{nombres}}</td>
+                        <td>{{apellidos}}</td>
+                        <td>{{cedula}}</td>
+                        <td>{{telefono}}</td>
+                        <td>{{formatoFecha fecha_nacimiento}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </section>
+    </nav>
+</body>
+<footer>
+    <h5 class="h5_medicos">Colombia</h5>
+    <div class="foot_medicos">
+        <a class="enlaces_medicos" href="https://www.facebook.com/?locale=es_LA">FACEBOOK</a> <b>/</b>
+        <a class="enlaces_medicos" href="https://www.instagram.com/">INSTAGRAM</a> <b>/</b>
+        <a class="enlaces_medicos" href="https://twitter.com/?lang=es">TWITTER</a> <b>/</b>
+        <a class="enlaces_medicos" href="https://co.linkedin.com/">LINKEDIN</a>
+    </div>
+</footer>

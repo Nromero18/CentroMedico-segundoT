@@ -1,0 +1,49 @@
+<header>
+    <!-- logo -->
+    <figure class="icono">
+        <img class="icon" src="img/icon.png" alt="icono">
+        <figcaption>CITYMED</figcaption>
+    </figure>
+    <div class="enlace">
+        <a class="enlaces" href="/index.html">Volver</a>
+    </div>
+    <!-- encabezado -->
+    <h1>CITAS AGENDADAS</h1>
+    <h3>A continuacion podras validar tus citas apreciado usuario</h3>
+</header>
+<main>
+    <table class="table" border="solid">
+        <thead>
+            <tr>
+                <th>Fecha cita</th>
+                <th>Paciente</th>
+                <th>Telefono paciente</th>
+                <th>Especialidad</th>
+                <th>Consultorio</th>
+                <th>Medico</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Se agrega el contenido dinamicamente por medio de Handlebars -->
+            {{#each resultado}}
+            <tr>
+                <td>{{formatoFecha fecha_cita}}</td>
+                <td>{{nombres}} {{apellidos}}</td>
+                <td>{{telefono}}</td>
+                <td>{{especialidad}}</td>
+                <td>{{consultorio}}</td>
+                <td>{{nombresMedico}} {{apellidosMedico}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</main>
+<footer>
+    <h5 class="h5_medicos">Colombia</h5>
+    <div class="foot_medicos">
+        <a class="enlaces_medicos" href="https://www.facebook.com/?locale=es_LA">FACEBOOK</a> <b>/</b>
+        <a class="enlaces_medicos" href="https://www.instagram.com/">INSTAGRAM</a> <b>/</b>
+        <a class="enlaces_medicos" href="https://twitter.com/?lang=es">TWITTER</a> <b>/</b>
+        <a class="enlaces_medicos" href="https://co.linkedin.com/">LINKEDIN</a>
+    </div>
+</footer>

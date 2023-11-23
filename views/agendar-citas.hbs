@@ -1,0 +1,49 @@
+<header>
+    <!-- logo -->
+    <figure class="icono">
+        <img class="icon" src="img/icon.png" alt="icono">
+        <figcaption>CITYMED</figcaption>
+    </figure>
+    <div class="enlace">
+        <a class="enlaces" href="/consultas-citas.html">Volver</a>
+    </div>
+    <!-- encabezado -->
+    <h1>AGENDAMIENTO DE CITAS MEDICAS</h1>
+    <h3>Completa la siguiente informacion para agendar tu proxima cita medica</h3>
+</header>
+<main>
+    <div class="registrar">
+        <div class="select">
+            <form method="post" action="/agregar-cita" class="form">
+                <div class="contenedorinput">
+                    <input type="number" id="cedula" name="cedula" class="input" required>
+                    <label for="cedula" class="label">Número de cedula</label>
+                </div>
+                <div class="contenedorinput">
+                    <input type="date" id="fecha_cita" name="fecha_cita" class="input" required>
+                    <label for="fecha_cita" class="label">Fecha de cita medica</label>
+                </div>
+                <div class="select">
+                    <label for="medico">Especialista</label>
+                    <select name="medico" id="medico" class="op" required>
+                        <option value="">----------Seleccione una opcion-----------</option>
+                        {{#each resultado}}
+                        <option value="{{cedula}}">{{nombres}} {{apellidos}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <input type="submit" value="Enviar" class="submitBoton">
+            </form>
+        </div>
+    </div>
+</main>
+<footer>
+    <h5 >Colombia</h5>
+    <hr>
+    <div class="foot">
+        <a class="enlaces" href="https://www.facebook.com/?locale=es_LA">FACEBOOK</a> <b>/</b>
+        <a class="enlaces" href="https://www.instagram.com/">INSTAGRAM</a> <b>/</b>
+        <a class="enlaces" href="https://twitter.com/?lang=es">TWITTER</a> <b>/</b>
+        <a class="enlaces" href="https://co.linkedin.com/">LINKEDIN</a>
+    </div>
+</footer>
